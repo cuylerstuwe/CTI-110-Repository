@@ -1,7 +1,20 @@
 import time
 
+def get_numerical_input(prompt):
+  input_as_number = None
+
+  while input_as_number is None:
+    user_input = input(prompt)
+    
+    try:
+      input_as_number = int(user_input)
+    except:
+      print("", end="")
+    
+  return input_as_number
+
 def triangleArea():
-    length1 = int(input("Enter length of first triangle \n"))
+    length1 = get_numerical_input("Enter length of first triangle \n")
     width1 = int(input("Enter width of first triangle \n"))
     length2 = int(input("Enter length of second triangle \n"))
     width2 = int(input("Enter width of second triangle \n"))
